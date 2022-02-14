@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
         <div className="min-h-screen ">
             <Nav />
 
-            <main className="">
+            <main className="font-nunito">
                 {children}
             </main>
 

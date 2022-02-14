@@ -4,7 +4,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      nunito: ['Nunito', 'sans-serif']
+      nunito: ['Nunito', 'sans-serif'],
+      header: ['EB Garamond', 'serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
     },
 
     extend: {
