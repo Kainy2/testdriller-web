@@ -2,6 +2,7 @@ import React from 'react'
 import Cards from '../Components/Card'
 import Hero from '../Components/Hero'
 import know from '../Assets/do-you-know.jpg'
+import { ButtonHero } from '../Components/Button'
 
 const Home = () => {
 
@@ -30,8 +31,10 @@ const Home = () => {
             <section>
                 <Hero />
             </section>
-            <section className='md:w-[70%] mx-auto'>
-                <h3 className='font-extrabold text-gray-900 text-4xl text-center p-20 '>REVEALED: The Simplest, Easiest and Quickest Way To Pass Even the Most Toughest Examination</h3>
+            <section className='md:w-[70%] p-5 mx-auto'>
+                <h3 className='font-extrabold text-gray-900 md:text-4xl text-2xl text-center w-[80%] mx-auto py-20 '>REVEALED: The Simplest, Easiest and Quickest Way To Pass Even the Most Toughest Examination</h3>
+                <div className='md:w-[90%] mx-auto'>
+
                 <p>
                     Even if you've failed 99 times, been shamed by friends and family, spatted on by the people you're suppose to be ahead of and have given up on life, schooling and education.
                     <br />
@@ -40,17 +43,14 @@ const Home = () => {
 
                     But..
                     <br />
-
-                    All good things don't come easy.
                     <br />
 
-                    Or
+                    All good things don't come easy... Or Do they?
                     <br />
-
-                    Do they?
                     <br />
 
                     Some people have to write their exams until they are able to spell their names with the exam count before passing them.
+                    <br />
                     <br />
 
                     The frustration, the anger, the good-for-nothing feeling from your self and even the people you call family..
@@ -66,10 +66,11 @@ const Home = () => {
 
                     Why? Why? Like why?, really?
                     <br />
-
-
-
                 </p>
+
+
+
+                </div>
             </section>
             <section id='usage' className='p-5 bg-slate-100 my-28 py-16'>
 
@@ -104,9 +105,9 @@ const Home = () => {
             </section>
 
 
-            <section id='how to use' className='p-5 md:w-[70%] mx-auto my-24 py-16'>
+            <section id='how to use' className='p-5 md:w-[70%] mx-auto mb-24'>
                 <div className=''>
-                    <h6 className='font-bold text-gray-900 font-montserrat text-4xl text-center mb-20 '> Here's how...</h6>
+                    <h6 className='font-bold text-gray-900 font-montserrat text-4xl text-center mb-20 '> Here's how... </h6>
                     <div className="md:flex justify-between items-center space-x-5 ">
 
                         <div className='w-11/12 p-2'>
@@ -128,7 +129,7 @@ const Home = () => {
             </section >
 
 
-            <section className='bg-gray-700 py-10 shadow-sm'>
+            <section className='bg-gray-700 py-16 shadow-sm'>
                 <div className='p-5 md:w-[70%] mx-auto  text-gray-100 '>
 
                     <h6 className='font-bold  font-montserrat text-4xl  py-5'> That's not all!!! </h6>
@@ -165,9 +166,9 @@ const Home = () => {
             </section>
 
             <section id='products' className='bg-gray-100 '>
-                <div className=' md:w-[75%] mx-auto  mt-32 mb-10  py-20 space-y-20'>
+                <div className=' md:w-[75%] mx-auto  mb-10  py-20 space-y-20'>
                     <h3 className=' font-semibold text-3xl text-center '>Products</h3>
-                    <div className=' md:grid md:grid-cols-3 gap-10'>
+                    <div className=' md:grid md:grid-cols-3 md:gap-10'>
 
                         {products.map(product => (
                             <Cards text={product.title} />
@@ -177,8 +178,8 @@ const Home = () => {
             </section>
 
 
-            <section id='get started' className='md:w-[70%] mx-auto'>
-                <h3 className='font-semibold text-3xl text-center p-20'>How to get started</h3>
+            <section id='get started' className='md:w-[70%] mx-auto p-5'>
+                <h3 className='font-semibold text-3xl px-10 py-20'>How to get started</h3>
                 <p>
                     <i>
                         Simply subscribe to any of the TestDriller Software product by downloading the TestDriller software application from any of your favourite online store on your mobile device, laptop or desktop computers and activate your choice product software with your unique subscription pin upon purchase.
@@ -206,6 +207,10 @@ const Home = () => {
 
 
                 </p>
+                <div id='Get Started'>
+                        <ButtonHero title=" Get Started"  target='_blank' link={"http://localhost:3000/'https://sendfox.com/lp/3qvw0l'"} />
+
+                </div>
 
 
             </section>

@@ -40,7 +40,7 @@ const Nav = () => {
     };
 
     return (
-        <div className="sticky top-0 bg-gray-900">
+        <div className="md:sticky top-0 bg-gray-900">
             {/* <div className="flex w-full sticky top-0  md:px-60 justify-between items-center text-slate-200 py-4 bg-priBg">
                 <div className="text-2xl">Content Hacker</div>
                 <div className="flex text-sm space-x-10">
@@ -61,7 +61,7 @@ const Nav = () => {
                             component="div"
                             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                         >
-                            TEST DRILLER&trade;
+                            <a href="/"> TEST DRILLER&trade;</a>
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -71,7 +71,7 @@ const Nav = () => {
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
                                 onClick={handleOpenNavMenu}
-                                color="inherit"
+                                color="info"
                             >
                                 <MenuIcon />
                             </IconButton>
@@ -105,10 +105,11 @@ const Nav = () => {
                         <Typography
                             variant="h6"
                             noWrap
+                            color='white'
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                         >
-                            LOGO
+                            <a href="/"> TEST DRILLER&trade;</a>
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (

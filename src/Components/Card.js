@@ -7,8 +7,8 @@ import Typography from '@mui/material/Typography';
 
 const Cards = ({text}) => {
     return (
-        <div className='shadow bg-white'>
-            <CardContent>
+        <div className='shadow bg-white mx-4'>
+            <CardContent sx={{ m: 1.5 }} >
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                    Product Name
                 </Typography>
