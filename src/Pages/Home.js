@@ -171,7 +171,7 @@ const Home = () => {
                     <div className=' md:grid md:grid-cols-3 md:gap-10'>
 
                         {products.map(product => (
-                            <Cards text={product.title} />
+                            <Cards key={product.title} text={product.title} />
                         ))}
                     </div>
                 </div>
@@ -180,7 +180,7 @@ const Home = () => {
 
             <section id='get started' className='md:w-[70%] mx-auto p-5'>
                 <h3 className='font-semibold text-3xl px-10 py-20'>How to get started</h3>
-                <p>
+                <div>
                     <i>
                         Simply subscribe to any of the TestDriller Software product by downloading the TestDriller software application from any of your favourite online store on your mobile device, laptop or desktop computers and activate your choice product software with your unique subscription pin upon purchase.
                     </i>
@@ -206,7 +206,7 @@ const Home = () => {
                     </b>
 
 
-                </p>
+                </div>
                 <div id='Get Started'>
                         <ButtonHero title=" Get Started"  target='_blank' link={"http://localhost:3000/'https://sendfox.com/lp/3qvw0l'"} />
 
