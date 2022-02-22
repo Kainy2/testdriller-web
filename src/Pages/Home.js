@@ -228,7 +228,9 @@ const Home = () => {
                     <br />
                     <br />
                     <br />
-                    <img className=' md:h-screen md:w-max w-screen' src={testimonial} alt="do you know" />
+                    <div >
+                        <img className=' md:h-screen md:w-max w-screen mx-auto' src={testimonial} alt="do you know" />
+                    </div>
                 </div>
             </section>
 
