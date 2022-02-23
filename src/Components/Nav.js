@@ -40,7 +40,7 @@ const Nav = () => {
     };
 
     return (
-        <div className="md:sticky top-0 bg-gray-900">
+        <div className="md:sticky top-0 z-10     bg-gray-900">
             {/* <div className="flex w-full sticky top-0  md:px-60 justify-between items-center text-slate-200 py-4 bg-priBg">
                 <div className="text-2xl">Content Hacker</div>
                 <div className="flex text-sm space-x-10">
