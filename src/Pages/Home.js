@@ -12,29 +12,36 @@ import { ButtonHero } from '../Components/Button'
 const Home = () => {
 
     const products = [
-        { title: ' TestDriller UTME' },
+        { title: ' TestDriller UTME', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.testdriller ' },
+        { title: 'TestDriller Post UTME', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.postjamb' },
+        { title: 'TestDriller BECE', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.bece ' },
+        { title: 'Law MCQ', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.lawmcq' },
+        { title: 'TestDriller National Common Entrance Examination', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ncee ' },
+        { title: 'TestDriller Cowbellpedia', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.cowbellpedia' },
+        { title: 'TestDriller IJMB', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ijmb ' },
+        { title: 'TestDriller ICAN', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ican.skills ' },
+        { title: 'TestDriller ICAN Professional', link:'https://play.google.com/store/apps/details?id=com.iafsawii.ican.pro' },
+        { title: 'TestDriller WAEC/NECO', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.waec.ssce' },
         { title: 'TestDriller SSCE' },
-        { title: 'MathSolver' },
-        { title: 'EnglishKit' },
         { title: 'TestDriller Unilag Foundation' },
-        { title: 'TestDriller Post UTME' },
-        { title: 'TestDriller BECE' },
-        { title: ' TestDriller NDA' },
-        { title: 'TestDriller Scholarship' },
+        { title: 'TestDriller NDA' },
+        { title: 'EnglishKit' },
         { title: 'TestCentre' },
-        { title: 'Law MCQ' },
-        { title: ' TestDriller National Common Entrance Examination' },
-        { title: 'TestDriller Cowbellpedia' },
-        { title: 'TestDriller IJMB' },
-        { title: 'TestDriller ICAN' },
+        { title: 'MathSolver' },
+        { title: 'TestDriller Scholarship' },
         { title: ' School Exam Management System.' },
 
     ]
     const calculateTimeLeft = () => {
         let year = new Date().getFullYear();
-        let difference = +new Date(`05/05/${year}`) - +new Date();
+        let mth = 3
+        let difference = +new Date(`0${mth}/11/${year}`) - +new Date();
 
         let timeLeft = {};
+
+        if (difference < 0) {
+            difference = difference + 3000000000
+        }
 
         if (difference > 0) {
             timeLeft = {
@@ -52,6 +59,7 @@ const Home = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
+
             setTimeLeft(calculateTimeLeft());
         }, 1000);
 
@@ -59,19 +67,7 @@ const Home = () => {
 
     });
 
-    const timerComponents = [];
 
-    Object.keys(timeLeft).forEach((interval) => {
-        if (!timeLeft[interval]) {
-            return;
-        }
-
-        timerComponents.push(
-            <span key={interval} className='font-bold'>
-                {timeLeft[interval]} {interval}{" "}
-            </span>
-        );
-    });
 
 
 
@@ -83,12 +79,14 @@ const Home = () => {
             </section>
             <section className='md:w-[70%] p-5 mx-auto'>
                 <h3 className='font-extrabold text-gray-900 md:text-4xl text-2xl text-center w-[80%] mx-auto py-20 '>REVEALED: The Simplest, Easiest and Quickest Way To Pass Even the Most Toughest Examination</h3>
-                <div className='md:w-[90%] mx-auto'>
+                <div className='md:w-full mx-auto'>
 
                     <p>
                         Even if you've failed 99 times, been shamed by friends and family, spatted on by the people you're suppose to be ahead of and have given up on life, schooling and education.
                         <br />
+                        <br />
                         Every student desires to smash their exams in one sitting especially the tough nuts and Destiny Determiners like WAEC, JAMB, Common Entrance, etc.
+                        <br />
                         <br />
 
                         But..
@@ -105,21 +103,23 @@ const Home = () => {
 
                         The frustration, the anger, the good-for-nothing feeling from your self and even the people you call family..
                         <br />
+                        <br />
                         It isn't there fault after all... No one wants to keep planting in a soil that looks fertile but doesn't produce anything year after year..
+                        <br />
                         <br />
 
                         And even if they are people like that, not in this part of our world..
                         <br />
+                        <br />
 
                         But why go through all this stress when you've got TestDriller.
+                        <br />
                         <br />
 
                         Like why should you?
                         <br />
+                        <br />
                     </p>
-
-
-
                 </div>
             </section>
             <section id='usage' className='p-5 bg-slate-100 my-28 py-16'>
@@ -159,8 +159,8 @@ const Home = () => {
             </section>
 
             <section>
-                <div className='flex justify-center space-x-10 h-52  my-20 mx-3 overflow-auto '>
-                    <img className=' ' src={fourColumns} alt="do you know" />
+                <div className='flex justify-between md:justify-center space-x-5 md:space-x-10 h-40 md:h-52 my-20 mx-3 overflow-auto '>
+                    <img className='w-10/12 md:w-auto ' src={fourColumns} alt="do you know" />
                     <img className=' ' src={threeColumns} alt="do you know" />
                     <img className=' ' src={intro} alt="do you know" />
 
@@ -168,16 +168,16 @@ const Home = () => {
             </section>
 
 
-            <section id='how to use' className='p-5 md:w-[70%] mx-auto mb-24'>
+            <section id='how to use' className='p-5 md:w-9/12 mx-auto mb-24'>
                 <div className=''>
                     <h6 className='font-bold text-gray-900 font-montserrat text-4xl text-center mb-16 '> Here's how... </h6>
-                    <div className="md:flex justify-between items-center space-x-5 ">
+                    <div className="md:flex md:justify-between md:items-center md:space-x-5 ">
 
                         <div className='w-11/12 p-2'>
                             <img src={landscape} alt="Here's how" />
                         </div>
 
-                        <div className='w-full'>
+                        <div className='w-full'> <br />
                             The TestDriller Software has over 15+ years past questions in tons of external exams like (WAEC, JAMB, IJMB, ICAN BECE, Common Entrance), solutions and visual practical guides which is annually updated by our expert tech team.
                             <br />
                             <br />
@@ -199,31 +199,41 @@ const Home = () => {
                     <h6 className='font-bold  font-montserrat text-4xl  py-5'> That's not all!!! </h6>
                     <br />
 
-                    - TestDriller also provides you with loads and lots of educational fun games to help you have a better and relaxed learning and understanding and at such, increasing your performance level..
+                    TestDriller also provides you with loads and lots of educational fun games to help you have a better and relaxed learning and understanding and at such, increasing your performance level..
+                    <br />
                     <br />
 
                     Still in doubt?
                     <br />
+                    <br />
 
                     Here are some of the beautiful gossips from our esteemed users:
+                    <br />
                     <br />
 
                     I used this software to study, prepare and practice for JAMB CBT since it was my first time writing the exam and it was super helpful! I got my course choice on first sitting.
                     ~Amandukwu Chisom
                     <br />
+                    <br />
 
 
                     Getting TestDriller for my students was one of the best decisions I've ever made. It helped familiarize them with the CBT system. After writing JAMB, their results were beyond impressive!
                     <br />
+                    <br />
 
                     ~Anonymous (School Owner)
+                    <br />
+                    <br />
+                    <br />
                     <br />
 
                     Also…
                     <br />
+                    <br />
 
                     These are some of the mind blowing JAMB scores from a few of our users…
 
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -239,15 +249,16 @@ const Home = () => {
                     <h3 className=' font-semibold text-3xl text-center '>Products</h3>
                     <div className=' md:grid md:grid-cols-3 md:gap-10'>
 
-                        {products.map(product => (
-                            <Cards key={product.title} text={product.title} />
+                        {products.filter(x => x.link)
+                            .map(product => (
+                            <Cards key={product.title} text={product.title} link={product.link} />
                         ))}
                     </div>
                 </div>
             </section>
 
 
-            <section id='get started' className='md:w-[70%] mx-auto p-5'>
+            <section id='get started' className='md:w-9/12 mx-auto p-5'>
                 <h3 className='font-semibold text-3xl pb-12'>How do you get started?</h3>
                 <div>
                     <i>
@@ -300,14 +311,46 @@ const Home = () => {
                 </div>
                 <div id='Get Started'>
                     <ButtonHero title=" Get Started" target='_blank' link={"https://sendfox.com/lp/3qvw0l"} />
-
-                </div>
-                <div className='text-center mx-aut0'>
-                    <p>Discount offer elapses with timer :</p> <br />
-                    {timerComponents.length ? timerComponents : <span>Time's up!</span>}
-
                 </div>
 
+                <div className='w-5/6 mx-auto flex space-x-5 justify-center'>
+                    <div className=''>
+                        <div className='flex items-center justify-center bg-gray-800 text-white w-20 h-10 rounded-md text-lg text-center font-bold'>
+                            {timeLeft.days}
+                        </div>
+                        <div className='text-black text-base text-center font-semibold'>
+                            Days
+                        </div>
+                    </div>
+
+                    <div className=''>
+                        <div className='flex items-center justify-center bg-gray-800 text-white w-20 h-10 rounded-md text-lg text-center font-bold'>
+                            {timeLeft.hours}
+                        </div>
+                        <div className='text-black text-base text-center font-semibold'>
+                            Hours
+                        </div>
+                    </div>
+
+                    <div className=''>
+                        <div className='flex items-center justify-center bg-gray-800 text-white w-20 h-10 rounded-md text-lg text-center font-bold'>
+                            {timeLeft.minutes}
+                        </div>
+                        <div className='text-black text-base text-center font-semibold'>
+                            Minutes
+                        </div>
+                    </div>
+
+                    <div className=''>
+                        <div className='flex items-center justify-center bg-gray-800 text-white w-20 h-10 rounded-md text-lg text-center font-bold'>
+                            {timeLeft.seconds}
+                        </div>
+                        <div className='text-black text-base text-center font-semibold'>
+                            Seconds
+                        </div>
+                    </div>
+
+                </div>
 
             </section>
 
