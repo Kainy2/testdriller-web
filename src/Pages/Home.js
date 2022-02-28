@@ -77,7 +77,7 @@ const Home = () => {
             <section>
                 <Hero />
             </section>
-            <section className='md:w-[70%] p-5 mx-auto'>
+            <section className='md:w- p-5 mx-auto'>
                 <h3 className='font-extrabold text-gray-900 md:text-4xl text-2xl text-center w-[80%] mx-auto py-20 '>REVEALED: The Simplest, Easiest and Quickest Way To Pass Even the Most Toughest Examination</h3>
                 <div className='md:w-full mx-auto'>
 
