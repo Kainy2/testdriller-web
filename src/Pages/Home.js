@@ -20,7 +20,7 @@ const Home = () => {
         { title: 'TestDriller Cowbellpedia', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.cowbellpedia' },
         { title: 'TestDriller IJMB', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ijmb ' },
         { title: 'TestDriller ICAN', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ican.skills ' },
-        { title: 'TestDriller ICAN Professional', link:'https://play.google.com/store/apps/details?id=com.iafsawii.ican.pro' },
+        { title: 'TestDriller ICAN Professional', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ican.pro' },
         { title: 'TestDriller WAEC/NECO', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.waec.ssce' },
         { title: 'TestDriller SSCE' },
         { title: 'TestDriller Unilag Foundation' },
@@ -77,8 +77,8 @@ const Home = () => {
             <section>
                 <Hero />
             </section>
-            <section className='md:w- p-5 mx-auto'>
-                <h3 className='font-extrabold text-gray-900 md:text-4xl text-2xl text-center w-[80%] mx-auto py-20 '>REVEALED: The Simplest, Easiest and Quickest Way To Pass Even the Most Toughest Examination</h3>
+            <section className='md:w-[80%] p-5 mx-auto'>
+                <h3 className='font-montserrat font-extrabold text-gray-900 md:text-4xl text-2xl text-center w-[80%] mx-auto py-20 '>REVEALED: The Simplest, Easiest and Quickest Way To Pass Even the Toughest Examination</h3>
                 <div className='md:w-full mx-auto'>
 
                     <p>
@@ -122,7 +122,7 @@ const Home = () => {
                     </p>
                 </div>
             </section>
-            <section id='usage' className='p-5 bg-slate-100 my-28 py-16'>
+            <section id='usage' className='p-5 bg-slate-100 py-32'>
 
                 <div className=' md:w-[70%] mx-auto '>
                     <h6 className='font-bold text-gray-900 font-montserrat text-4xl mb-10 pb-5'> What is it about Testdriller...</h6>
@@ -158,7 +158,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section>
+            <section className=' py-28'>
                 <div className='flex justify-between md:justify-center space-x-5 md:space-x-10 h-40 md:h-52 my-20 mx-3 overflow-auto '>
                     <img className='w-10/12 md:w-auto ' src={fourColumns} alt="do you know" />
                     <img className=' ' src={threeColumns} alt="do you know" />
@@ -168,8 +168,8 @@ const Home = () => {
             </section>
 
 
-            <section id='how to use' className='p-5 md:w-9/12 mx-auto mb-24'>
-                <div className=''>
+            <section id='how to use' className='p-5 py-40 bg-slate-100'>
+                <div className='md:w-9/12 mx-auto'>
                     <h6 className='font-bold text-gray-900 font-montserrat text-4xl text-center mb-16 '> Here's how... </h6>
                     <div className="md:flex md:justify-between md:items-center md:space-x-5 ">
 
@@ -211,13 +211,13 @@ const Home = () => {
                     <br />
                     <br />
 
-                    I used this software to study, prepare and practice for JAMB CBT since it was my first time writing the exam and it was super helpful! I got my course choice on first sitting.
+                    <i>I used this software to study, prepare and practice for JAMB CBT since it was my first time writing the exam and it was super helpful! I got my course choice on first sitting.</i>
                     ~Amandukwu Chisom
                     <br />
                     <br />
 
 
-                    Getting TestDriller for my students was one of the best decisions I've ever made. It helped familiarize them with the CBT system. After writing JAMB, their results were beyond impressive!
+                    <i> Getting TestDriller for my students was one of the best decisions I've ever made. It helped familiarize them with the CBT system. After writing JAMB, their results were beyond impressive!</i>
                     <br />
                     <br />
 
@@ -245,33 +245,39 @@ const Home = () => {
             </section>
 
             <section id='products' className='bg-gray-100 '>
-                <div className=' md:w-[75%] mx-auto  mb-10  py-20 space-y-20'>
-                    <h3 className=' font-semibold text-3xl text-center '>Products</h3>
+                <div className=' md:w-[75%] mx-auto mb-10 py-20 px-5 space-y-16'>
+                    <h3 className=' font-semibold text-4xl text-center font-montserrat'>Products</h3>
+                    <h4 className='font-semibold text-xl text'> How Do You Get Started? </h4> 
+                    <p className='text-justify'>
+                        <i>
+                            Simply subscribe to any of the TestDriller Software product by downloading your choice TestDriller application from any of your favourite online store (Google play Store or Apple Store) by clicking any of these buttons below:
+                        </i>
+                    </p>
+                    <div id='Get Started' className='pb-10'>
+                        <ButtonHero title=" Get Started" target='_blank' link={"https://sendfox.com/lp/3qvw0l"} />
+                    </div>
                     <div className=' md:grid md:grid-cols-3 md:gap-10'>
 
                         {products.filter(x => x.link)
                             .map(product => (
-                            <Cards key={product.title} text={product.title} link={product.link} />
-                        ))}
+                                <Cards key={product.title} text={product.title} link={product.link} />
+                            ))}
                     </div>
+
+                    <p className='pt-10 text-justify'>
+                        <i> Immediately after download, you activate your downloaded choice product software with your purchased unique subscription/activation code.. </i>
+                    </p>
                 </div>
+
             </section>
 
 
             <section id='get started' className='md:w-9/12 mx-auto p-5'>
-                <h3 className='font-semibold text-3xl pb-12'>How do you get started?</h3>
+                <h3 className='font-montserrat font-semibold text-3xl pb-12'>How do you get started?</h3>
                 <div>
-                    <i>
-                        Simply subscribe to any of the TestDriller Software product by downloading your choice TestDriller application from any of your favourite online store (Google play Store or Apple Store) by clicking any of these buttons below:
-                    </i>
 
-
-                    <div className=" md:mt-5 mt-16">
-                        <ButtonHero title=" Download (Android) " link={'https://play.google.com/store/apps/details?id=com.iafsawii.testdriller'} />
-                        <ButtonHero title=" Download (iOS) " link={'https://apps.apple.com/ng/app/jamb-cbt-news-results/id1515034318'} />
-                    </div>
                     <p>
-                        on your mobile device or by simply punching the name of your choice product on your laptop or desktop computers.
+                        Searching on the app store of your mobile device or by simply punching the name of your choice product on your laptop or desktop computers.
                     </p>
                     <br />
                     <p>
@@ -302,16 +308,12 @@ const Home = () => {
                     Ready to boost your confidence level?
                     <br />
                     <br />
-
-                    Hit the button below to <b>GET STARTED!!!</b>
                     <br />
                     <br />
 
 
                 </div>
-                <div id='Get Started'>
-                    <ButtonHero title=" Get Started" target='_blank' link={"https://sendfox.com/lp/3qvw0l"} />
-                </div>
+
 
                 <div className='w-5/6 mx-auto flex space-x-5 justify-center'>
                     <div className=''>
