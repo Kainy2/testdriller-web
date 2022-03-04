@@ -1,6 +1,7 @@
 import { Phone } from '@mui/icons-material'
 import { Button } from '@mui/material'
 import React from 'react'
+import { ButtonHero } from './Button'
 
 const Footer = () => {
     return (
