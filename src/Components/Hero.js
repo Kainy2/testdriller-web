@@ -1,4 +1,3 @@
-import React from 'react'
 import HeroImg from '../Assets/hero.jpg'
 import { ButtonHero } from './Button'
 

@@ -210,7 +210,6 @@ const Home = () => {
                     Still in doubt?
                     <br />
                     <br />
-
                     Here are some of the beautiful gossips from our esteemed users:
                     <br /> <br /> <br /><br />
 
