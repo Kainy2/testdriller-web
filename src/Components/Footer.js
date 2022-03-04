@@ -1,20 +1,25 @@
+import { Phone } from '@mui/icons-material'
+import { Button } from '@mui/material'
 import React from 'react'
 
 const Footer = () => {
-  return (
-      <div className="flex w-full space-x-20 mt-32 justify-evenly items-center  text-slate-200 py-10 bg-priBg">
-          <div className=" cursor-pointer  text-sm">
-              <div>Book A Call</div>
-              <div>Terms</div>
-              <div>Academy</div>
-              <div>Login/Sign Up</div>
-          </div>
-          <div className=" text-sm">
-              <div>Terms Of Use</div>
-              <div>Privacy Policy</div>
-          </div>
-      </div>
-  )
+    return (
+        <div>
+            <div className="flex w-full  mt-32 justify-evenly items-center text-slate-200 py-10 bg-priBg">
+                <div className="text-xl">
+                    Book a call with us now
+                </div>
+                <div id='contact-us' className=''>
+                    <div className='w-max bg-gray-300 px-2'>
+                        <Phone sx={{ color: 'black' }} />
+                        <Button variant="default" sx={{ color: 'black' }} size='large' color='transparent' href="tel:+2348106086040"> Call Now </Button>
+                    </div>
+                    {/* <ButtonHero title="Get Started" link="tel:+2348106086040" /> */}
+
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Footer

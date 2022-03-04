@@ -8,6 +8,7 @@ import testimonial from '../Assets/testdriller-testimonial.jpg'
 import fourColumns from '../Assets/testdriller-four-columns.jpg'
 import threeColumns from '../Assets/testdriller-three-columns.jpg'
 import { ButtonHero } from '../Components/Button'
+import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material'
 
 const Home = () => {
 
@@ -15,7 +16,7 @@ const Home = () => {
         { title: ' TestDriller UTME', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.testdriller ' },
         { title: 'TestDriller Post UTME', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.postjamb' },
         { title: 'TestDriller BECE', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.bece ' },
-        { title: 'Law MCQ', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.lawmcq' },
+        { title: 'Testdriller Law MCQ', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.lawmcq' },
         { title: 'TestDriller National Common Entrance Examination', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ncee ' },
         { title: 'TestDriller Cowbellpedia', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.cowbellpedia' },
         { title: 'TestDriller IJMB', link: 'https://play.google.com/store/apps/details?id=com.iafsawii.ijmb ' },
@@ -34,8 +35,8 @@ const Home = () => {
     ]
     const calculateTimeLeft = () => {
         let year = new Date().getFullYear();
-        let mth = 3
-        let difference = +new Date(`0${mth}/11/${year}`) - +new Date();
+        let mth = 4
+        let difference = +new Date(`0${mth}/5/${year}`) - +new Date();
 
         let timeLeft = {};
 
@@ -122,7 +123,7 @@ const Home = () => {
                     </p>
                 </div>
             </section>
-            <section id='usage' className='p-5 bg-slate-100 py-32'>
+            <section id='about' className='p-5 bg-slate-100 py-32'>
 
                 <div className=' md:w-[70%] mx-auto '>
                     <h6 className='font-bold text-gray-900 font-montserrat text-4xl mb-10 pb-5'> What is it about Testdriller...</h6>
@@ -159,11 +160,14 @@ const Home = () => {
             </section>
 
             <section className=' py-28'>
-                <div className='flex justify-between md:justify-center space-x-5 md:space-x-10 h-40 md:h-52 my-20 mx-3 overflow-auto '>
+                <div className='flex justify-between md:justify-center space-x-5 md:space-x-10 h-40 md:h-52 my-20 mx-3 overflow-auto cursor-all-scroll'>
                     <img className='w-10/12 md:w-auto ' src={fourColumns} alt="do you know" />
                     <img className=' ' src={threeColumns} alt="do you know" />
                     <img className=' ' src={intro} alt="do you know" />
-
+                </div>
+                <div className=' flex md:hidden w-1/2 mx-auto space-x-8 justify-center '>
+                    <ArrowBackIos />
+                    <ArrowForwardIos />
                 </div>
             </section>
 
@@ -208,20 +212,17 @@ const Home = () => {
                     <br />
 
                     Here are some of the beautiful gossips from our esteemed users:
-                    <br />
-                    <br />
+                    <br /> <br /> <br /><br />
 
-                    <i>I used this software to study, prepare and practice for JAMB CBT since it was my first time writing the exam and it was super helpful! I got my course choice on first sitting.</i>
-                    ~Amandukwu Chisom
+                    <p className='italic text-gray-300'>I used this software to study, prepare and practice for JAMB CBT since it was my first time writing the exam and it was super helpful! I got my course choice on first sitting.</p>
                     <br />
-                    <br />
+                    ~ Amandukwu Chisom
+                    <br /><br /><br /><br />
 
 
-                    <i> Getting TestDriller for my students was one of the best decisions I've ever made. It helped familiarize them with the CBT system. After writing JAMB, their results were beyond impressive!</i>
+                    <p className='italic text-gray-300'>Getting TestDriller for my students was one of the best decisions I've ever made. It helped familiarize them with the CBT system. After writing JAMB, their results were beyond impressive!</p>
                     <br />
-                    <br />
-
-                    ~Anonymous (School Owner)
+                    ~ Anonymous (School Owner)
                     <br />
                     <br />
                     <br />
@@ -245,17 +246,14 @@ const Home = () => {
             </section>
 
             <section id='products' className='bg-gray-100 '>
-                <div className=' md:w-[75%] mx-auto mb-10 py-20 px-5 space-y-16'>
-                    <h3 className=' font-semibold text-4xl text-center font-montserrat'>Products</h3>
-                    <h4 className='font-semibold text-xl text'> How Do You Get Started? </h4> 
+                <div className=' md:w-[75%] mx-auto py-20 px-5 space-y-16'>
+                    <h3 className=' font-semibold uppercase text-4xl text-center font-montserrat'> How Do You Get Started?</h3>
                     <p className='text-justify'>
                         <i>
-                            Simply subscribe to any of the TestDriller Software product by downloading your choice TestDriller application from any of your favourite online store (Google play Store or Apple Store) by clicking any of these buttons below:
+                            Simply subscribe to any of the TestDriller Software product by downloading your choice TestDriller product from any of your favourite online download store by simply punching the name of your choice product on your laptop or desktop computers.. <br /><br />
+                            Or by clicking any of the download buttons below our list of available products to access direct download to your choice product.
                         </i>
                     </p>
-                    <div id='Get Started' className='pb-10'>
-                        <ButtonHero title=" Get Started" target='_blank' link={"https://sendfox.com/lp/3qvw0l"} />
-                    </div>
                     <div className=' md:grid md:grid-cols-3 md:gap-10'>
 
                         {products.filter(x => x.link)
@@ -267,55 +265,46 @@ const Home = () => {
                     <p className='pt-10 text-justify'>
                         <i> Immediately after download, you activate your downloaded choice product software with your purchased unique subscription/activation code.. </i>
                     </p>
+                    <div>
+                        <i id='get-start'>
+                            Here are some of the benefits from some of our TestDriller Products…
+                        </i>
+
+                        <ul className='my-10'>
+                            <li><b>The MathSolver: The MathSolver for Senior Secondary School helps to solve mathematical problems by providing adequate workings to arrive at solutions.  Asides this, the MathSolver is used to generate printable graphs and charts from mathematical functions or statistical data.
+                            </b></li>
+                            <br />
+                            <li><b>   The EnglishKit: The EnglishKit for Senior Secondary School is another product designed to help users improve their knowledge in the English Language. It contains idiomatic expressions, dictionary, proverbs and more.</b></li>
+                        </ul>
+
+                        With TestDriller, you're sure to make at least 75% in any exam you sit for.
+                        <br />
+                        <br />
+
+                        And that's why, for a limited period of 30-days only, you can get your unique subscription pin code at a 50% discount purchase price of #2,000 naira only.
+                        <br />
+                        <br />
+
+                        Ready to boost your confidence level?
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div id='get started' className='pb-10'>
+                            <ButtonHero title="Get Started" target='_blank' link={"https://sendfox.com/lp/3qvw0l"} />
+                        </div>
+
+
+                    </div>
+
+
                 </div>
 
             </section>
+            <section className='p-10 md:w-4/6 md:mx-auto'>
 
-
-            <section id='get started' className='md:w-9/12 mx-auto p-5'>
-                <h3 className='font-montserrat font-semibold text-3xl pb-12'>How do you get started?</h3>
-                <div>
-
-                    <p>
-                        Searching on the app store of your mobile device or by simply punching the name of your choice product on your laptop or desktop computers.
-                    </p>
-                    <br />
-                    <p>
-                        Immediately after download, you activate your downloaded choice product software with your purchased unique subscription.
-                    </p>
-
-                    <br />
-                    <br />
-                    <i>
-                        Here are some of the benefits from some of our TestDriller Products…
-                    </i>
-
-                    <ul className='my-10'>
-                        <li><b>The MathSolver: The MathSolver for Senior Secondary School helps to solve mathematical problems by providing adequate workings to arrive at solutions.  Asides this, the MathSolver is used to generate printable graphs and charts from mathematical functions or statistical data.
-                        </b></li>
-                        <br />
-                        <li><b>   The EnglishKit: The EnglishKit for Senior Secondary School is another product designed to help users improve their knowledge in the English Language. It contains idiomatic expressions, dictionary, proverbs and more.</b></li>
-                    </ul>
-
-                    With TestDriller, you're sure to make at least 75% in any exam you sit for.
-                    <br />
-                    <br />
-
-                    And that's why, for a limited period of 30-days only, you can get your unique subscription pin code at a 50% discount purchase price of #2,000 naira only.
-                    <br />
-                    <br />
-
-                    Ready to boost your confidence level?
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-
-
-                </div>
-
-
-                <div className='w-5/6 mx-auto flex space-x-5 justify-center'>
+                <p className='font-semibold'>Days until discount Expiry: </p>
+                <div className='w-5/6 mx-auto flex space-x-5 justify-center pt-20'>
                     <div className=''>
                         <div className='flex items-center justify-center bg-gray-800 text-white w-20 h-10 rounded-md text-lg text-center font-bold'>
                             {timeLeft.days}
@@ -351,10 +340,13 @@ const Home = () => {
                             Seconds
                         </div>
                     </div>
-
                 </div>
-
             </section>
+
+
+            {/* <section id='get started' className='md:w-9/12 mx-auto p-5'> */}
+
+            {/* </section> */}
 
 
         </div >

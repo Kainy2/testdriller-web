@@ -14,9 +14,9 @@ import MenuItem from '@mui/material/MenuItem';
 
 const Nav = () => {
     const pages = [
-        { title: 'Usage', link: '#products' },
+        { title: 'About', link: '#products' },
         { title: 'Products', link: '#products' },
-        { title: 'Get Started', link: '#products' },
+        { title: 'Get Started', link: '#get-started' },
 
     ];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -40,7 +40,7 @@ const Nav = () => {
     };
 
     return (
-        <div className="md:sticky top-0 z-10     bg-gray-900">
+        <div className="md:sticky top-0 z-10 bg-gray-900">
             {/* <div className="flex w-full sticky top-0  md:px-60 justify-between items-center text-slate-200 py-4 bg-priBg">
                 <div className="text-2xl">Content Hacker</div>
                 <div className="flex text-sm space-x-10">
@@ -109,7 +109,7 @@ const Nav = () => {
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                         >
-                            <a href="/"> TEST DRILLER&trade;</a>
+                            <a href="#"> TEST DRILLER&trade;</a>
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
