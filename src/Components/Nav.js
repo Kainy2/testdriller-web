@@ -41,16 +41,6 @@ const Nav = () => {
 
     return (
         <div className="md:sticky top-0 z-10 bg-gray-900">
-            {/* <div className="flex w-full sticky top-0  md:px-60 justify-between items-center text-slate-200 py-4 bg-priBg">
-                <div className="text-2xl">Content Hacker</div>
-                <div className="flex text-sm space-x-10">
-                    <div>Book A Call</div>
-                    <div>Terms</div>
-                    <div>Academy</div>
-                    <div>Login/Sign Up</div>
-                </div>
-            </div> */}
-
             <AppBar color='transparent' position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
@@ -96,9 +86,11 @@ const Nav = () => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page.title} onClick={handleCloseNavMenu} href={`#${page.title.toLowerCase()}`}>
-                                        <Typography textAlign="center">{page.title}</Typography>
-                                    </MenuItem>
+                                    <a key={page.title} href={`#${page.title.toLowerCase()}`}>
+                                        <MenuItem onClick={handleCloseNavMenu} >
+                                            <Typography textAlign="center">{page.title}</Typography>
+                                        </MenuItem>
+                                    </a>
                                 ))}
                             </Menu>
                         </Box>

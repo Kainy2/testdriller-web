@@ -12,7 +12,7 @@ const Footer = () => {
                 <div id='contact-us' className=''>
                     <div className='w-max bg-gray-300 px-2'>
                         <Phone sx={{ color: 'black' }} />
-                        <Button variant="default" sx={{ color: 'black' }} size='large' color='transparent' href="tel:+2348106086040"> Call Now </Button>
+                        <Button variant="default" sx={{ color: 'black' }} size='large' color='transparent' href="tel:+2348148090531"> Call Now </Button>
                     </div>
                 </div>
             </div>
